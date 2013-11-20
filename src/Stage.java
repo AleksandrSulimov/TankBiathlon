@@ -1,27 +1,29 @@
 
 public class Stage {
-	private int lenghtStage;					//Длина этапа				(м)
-	private int lengthPenaltyLoop;				//Длина штрафного круга		(м)
-	private double passabilitySoil;				//Проходимость грунта		(0;1)
-	private FiringLine FL;						//Огневой рубеж
+	private int NStage;                         //#Stage
+	private int LenghtStage;					//Length				(m)
+	private double Passability;				//Passability		(0;1)
+	
 	
 	public Stage(){
-		this.lenghtStage = -1;
-		this.passabilitySoil = -1;
+		this.LenghtStage = 0;
+		this.Passability = 0.0;
 	}
-	public Stage(int lenghtStage, int lengthPenaltyLoop, double passabilitySoil){
-		this.lenghtStage = lenghtStage;
-		this.lengthPenaltyLoop = lengthPenaltyLoop;
-		this.passabilitySoil = passabilitySoil;
+	
+	public Stage(int LenghtStage, double Passability){
+		this.LenghtStage = LenghtStage;
+		this.Passability = Passability;
 	}
 	public int getLenghtStage(){
-		return lenghtStage;
+		return LenghtStage;
 	}
-	public int getLenghtPenaltyLoop(){
-		return lengthPenaltyLoop;
+	
+	public double getPassability(){
+		return Passability;
 	}
-	public double getPassabilitySoil(){
-		return passabilitySoil;
+	
+	public int getNStage(){
+		return NStage;
 	}
-
+	
 }
